@@ -25,6 +25,6 @@
     width: 110%;
     height: 100%;
     object-fit: cover;
-    /* transform: rotateZ(0deg) translateY(-8rem) translateX(-4rem); */
-    transform: translateY(-8rem);
+    transform: rotateZ(-5deg) translateY(-8rem) translateX(-4rem);
+    /* transform: translateY(-8rem); */
   }
