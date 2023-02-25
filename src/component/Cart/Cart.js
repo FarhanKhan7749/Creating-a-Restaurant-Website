@@ -1,4 +1,5 @@
-import Modal from "../UI/Modal";
+import React from "react";
+//import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import CartContext from "../../store/cart-context";
 import { useContext } from "react";
@@ -22,7 +23,7 @@ const Cart = (props) => {
   // );
 
   return (
-    <Modal onClick={props.onClick}>
+    <React.Fragment>
       {console.log("Cart file is render")}
       <ul className={classes["cart-items"]}>
         {cartCtx.items.map((item) => (
@@ -45,7 +46,7 @@ const Cart = (props) => {
         </button>
         <button className={classes.button}>Order</button>
       </div>
-    </Modal>
+    </React.Fragment>
   );
 };
 

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Cart from "./component/Cart/Cart";
 import Header from "./component/Layout/Header";
 import Meals from "./component/Meals/Meals";
+import Modal from "./component/UI/Modal";
 import CartProvider from "./store/CartProvider";
 //import MealsSummary from "./component/Meals/MealsSummary";
 
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <React.Fragment>
-      {cartIsShown && <Cart onClick ={hideCartHandler}/>}
+      {cartIsShown && <Modal onClick={hideCartHandler}> <Cart onClick ={hideCartHandler}/></Modal>}
       <Header onClick = {showCartHandler}/>
       <main>
         <Meals></Meals>
