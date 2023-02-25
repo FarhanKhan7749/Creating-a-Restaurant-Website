@@ -5,6 +5,7 @@ import CartContext from '../../store/cart-context';
 const CartItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
   const ctx = useContext(CartContext);
+  {console.log("Cart item file is render")}
   return (
     <li className={classes['cart-item']}>
       <div>
@@ -15,8 +16,8 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button onClick={()=> ctx.quantityminus(props)}>−</button>
-        <button onClick={()=> ctx.quantityplus(props)}>+</button>
+        <button onClick={()=> ctx.removeItem({...props})}>−</button>
+        <button onClick={()=> ctx.addItem({...props})}>+</button>
       </div>
     </li>
   );

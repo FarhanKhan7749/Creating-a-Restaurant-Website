@@ -18,13 +18,13 @@ function App() {
   };
 
   return (
-    <CartProvider>
+    <React.Fragment>
       {cartIsShown && <Cart onClick ={hideCartHandler}/>}
       <Header onClick = {showCartHandler}/>
       <main>
         <Meals></Meals>
       </main>
-    </CartProvider>
+    </React.Fragment>
   );
 }
 
